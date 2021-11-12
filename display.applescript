@@ -1,7 +1,3 @@
--- When dealing with the display system preferences there is going to be window
--- on each monitor. You need to target the correct window. Each dialog has slight 
--- differences so this code targets how the dialog appears on my external monitor
--- that is set as the main monitor for my Mac
 
 tell application "System Preferences"
 	activate
@@ -19,15 +15,16 @@ tell application "System Events"
 			select row 2 of table 1 of scroll area 1
 			delay 3.0
 			click radio button "Default for display"
-			delay 3.0 
+			delay 3.0
 		end tell
 		
 		tell window "ASUS PB278 (1)"
 			-- get UI elements -- don't forget about using this for exploring names
 			tell group 1 of toolbar 1
 				click button 1 of group 1 -- click the back button
-
+				
 			end tell
 		end tell
 	end tell
 end tell
+
