@@ -1,3 +1,8 @@
+-- When dealing with the display system preferences there is going to be window
+-- on each monitor. You need to target the correct window. Each dialog has slight 
+-- differences so this code targets how the dialog appears on my external monitor
+-- that is set as the main monitor for my Mac
+
 tell application "System Preferences"
 	activate
 	set the current pane to pane "com.apple.preference.displays"
@@ -5,21 +10,24 @@ end tell
 
 tell application "System Events"
 	tell process "System Preferences"
-		repeat until exists tab group 1 of window 1
+		set frontmost to true
+		repeat until exists window "ASUS PB278 (1)"
 		end repeat
-		
-		tell tab group 1 of window 1
+		tell tab group 1 of group 1 of window "ASUS PB278 (1)"
 			click radio button "Display"
 			click radio button "Scaled"
-			tell table 1 of scroll area 1
-				select row 2 -- this is going to take a second or two to have an effect
-			end tell
-			
+			select row 2 of table 1 of scroll area 1
+			delay 3.0
+			click radio button "Default for display"
+			delay 3.0 
 		end tell
+		
+		tell window "ASUS PB278 (1)"
+			-- get UI elements -- don't forget about using this for exploring names
+			tell group 1 of toolbar 1
+				click button 1 of group 1 -- click the back button
 
-		delay 2.0 -- wait or the click won't work
-		click radio button "Default for display" of tab group 1 of window 1
-    get UI elements -- don't forget about using this for exploring names
+			end tell
+		end tell
 	end tell
 end tell
-
