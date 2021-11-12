@@ -8,13 +8,13 @@ change the resolution to something scaled. This makes all the hidden windows app
 time and without delays clicking buttons with Applescript doesn't work.  
 
 ## Customization Needed
- 
- When dealing with the display system preferences there is going to be window
- on each monitor. You need to target the correct window. Each dialog has slight 
- differences so this code targets how the dialog appears on my external monitor
- that is set as the main monitor for my Mac. You can target windows by number 
- (the main monitor would be 1) or by name. In the code you can see my Monitor is
- called "ASUS PB278 (1)". Whatever name is showing at the top of the Displays control 
+
+When dealing with the display system preferences there is going to be window
+on each monitor. You need to target the correct window. Each dialog has slight 
+differences so this code targets how the dialog appears on my external monitor
+that is set as the main monitor for my Mac. You can target windows by number 
+(the main monitor would be 1) or by name. In the code you can see my Monitor is
+called "ASUS PB278 (1)". Whatever name is showing at the top of the Displays control 
  panel is the name you want to use.
 
 ## Security Issues
@@ -28,5 +28,9 @@ wherever you stored the application.
 
 If you want to be able to run this application from the menu bar store it in Scripts folder.
 Use the Finder and select the `Go->Go To Folder...` option and use `Library/Scripts`. Scripts 
-placed there will show up in the Script Editor menu in the Apple toolbar. To make that toolbar
-appear, open the Script Editor, use the `Preferences` menu. On the `General` tab make sure the `Show Script menu in menu bar` and the `Show Computer scripts` checkboxes are checked. You should then see a little paper scroll icon in the menu bar. Clicking on that should display your script at the bottom. 
+placed there will show up in the Script Editor menu in the Apple toolbar. 
+You can make the script menu appear by from the Apple Script Editor. use the `Preferences` menu. On the `General` tab make sure the `Show Script menu in menu bar` and the `Show Computer scripts` checkboxes are checked. You should then see a little paper scroll icon in the menu bar. Clicking on that should display your scripts from the aforementioned Scripts folder at the bottom. If you figure out how to get them to show at the top, let me know!
+
+## License
+
+This code is available under the MIT License - see the license.txt file
