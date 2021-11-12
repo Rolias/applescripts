@@ -6,7 +6,11 @@ In recent versions of the macOS when my laptop wakes from sleep all my external 
 
 ## Customization Needed
 
+I'm assuming you've written an Applescript and know how to use the Script editor. 
+
 When dealing with the `Displays` system preferences panel there is going to be window on each monitor. You need to customize this script to target the correct window. Each of these windows has slight differences so this code targets how the dialog appears on my main external monitor. You can target windows by number or name. The main monitor would be 1. In the code you can see my Monitor is called "ASUS PB278 (1)". Whatever name is showing at the top of the `Displays` control panel is the name you want to use.
+
+Once you are done and have tested, save the file off as an Application. (See Storing the Applicaition below)
 
 ## Security Issues
 
